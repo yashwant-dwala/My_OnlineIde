@@ -3,8 +3,10 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
+node_modules/
 
 # Other files and folders
+keys.js
 .settings/
 
 # Executables
