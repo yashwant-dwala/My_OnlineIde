@@ -10,31 +10,35 @@ if (process.env.NODE_ENV != "production") {
 }
 
 // Connecting to Mongo DB Cloud
-mongoose.connect(MONGOURI);
-mongoose.connection.on("connected", () => {
-  console.log("connected to mongo !!!");
-});
-mongoose.connection.on("error", (err) => {
-  console.log("error connecting....", err);
-});
+// mongoose.connect(MONGOURI);
+// mongoose.connection.on("connected", () => {
+//   console.log("connected to mongo !!!");
+// });
+// mongoose.connection.on("error", (err) => {
+//   console.log("error connecting....", err);
+// });
 ////////////////////
 
 
 
 // Regestering the routers
 app.use(express.json()); // parses the post requests and send to routes
-app.use(require("./routes/auth")); // route handelers externally
-app.use(require("./routes/ide"));
+// app.use(require("./routes/auth")); // route handelers externally
+// app.use(require("./routes/ide"));
 
 
-// if (process.env.NODE_ENV === "production") {
-//   const path = require("path")
-//   app.use(express.static(path.join(__dirname, "/client/build")));
+if (process.env.NODE_ENV === "production") {
+  const path = require("path")
+  app.use(express.static(path.join(__dirname, "/client/build")));
 
-//   app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
-// });
-// }
+  app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+});
+}
+
+// app.get('/', (req,res) => {
+//     res.send("hello world");
+// })
 
 app.listen(PORT, () => {
   console.log("Server is running at localhost:", PORT);
