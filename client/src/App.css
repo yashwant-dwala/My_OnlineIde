@@ -35,8 +35,6 @@
 .App{
   display: flex;
   flex-wrap: wrap;
-  /* margin: auto; */
-  /* justify-content: center; */
 }
 .code{
   height:94vh;
@@ -106,12 +104,25 @@
 p{
   margin: 20px;
 }
+.ideLogo{
+  margin-top: 25px;
+  margin-bottom: -10px;
+  margin-left: 0px;
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+  background-color: #000001;
+  border-radius: 50%;
+}
 .Qname{
-  margin: 20px;
+  display: inline;
+  margin: 30px;
+  /* margin-left: 0px; */
 }
 .Eimg{
   width: 40vw;
   margin: auto;
+  /* filter:invert(1) hue-rotate(180deg); */
 }
 .heading{
   margin: 0%;

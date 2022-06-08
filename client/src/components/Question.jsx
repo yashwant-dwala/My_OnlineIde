@@ -12,6 +12,7 @@ function Question() {
     return (
         <div className="Question">
             {/* <h1>My Code Compiler</h1> */}
+            {/* <img src='https://res.cloudinary.com/xenotoxin/image/upload/v1654674008/logo_ll5wjs.png' alt='logo' className='ideLogo'/> */}
             <h2 className='Qname'>Binary Tree to BST</h2>
             <hr></hr>
             <p className='task'>Given a Binary Tree, convert it to Binary Search Tree in such a way that keeps the original structure of Binary Tree intact.</p>
